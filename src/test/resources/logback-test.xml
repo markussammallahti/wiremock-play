@@ -1,0 +1,15 @@
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%-5level %logger - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="wiremock.org" level="OFF" />
+  <logger name="WireMock" level="OFF" />
+  <logger name="play.shaded.ahc" level="ERROR" />
+
+  <root level="WARN">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
