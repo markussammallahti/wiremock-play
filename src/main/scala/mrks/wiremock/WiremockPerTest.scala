@@ -16,7 +16,9 @@ trait WiremockPerTest extends SuiteMixin
 
     // Ping before first test to initialize server
     mockServer.expects("GET", "/_test/ping").returns(200.withBody("init"))
-    Source.fromURL(s"${mockServer.url}/_test/ping").mkString
+    val source = Source.fromURL(s"${mockServer.url}/_test/ping")
+    source.mkString
+    source.close()
 
     super.beforeAll()
   }

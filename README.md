@@ -7,7 +7,7 @@
 Add dependency
 ```
 resolvers += Resolver.bintrayRepo("mrks", "maven")
-libraryDependencies += "mrks" %% "wiremock-play" % "0.1" % Test
+libraryDependencies += "mrks" %% "wiremock-play" % "0.2" % Test
 ```
 
 See examples in [tests](src/test/scala/mrks/wiremock/WiremockSpec.scala)
